@@ -1,0 +1,6 @@
+if SHIELD_DG729
+
+config ZMK_KEYBOARD_NAME
+    default "dg729"
+
+endif

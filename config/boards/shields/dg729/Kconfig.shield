@@ -1,0 +1,2 @@
+config SHIELD_DG729
+    def_bool $(shields_list_contains,dg729)
