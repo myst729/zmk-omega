@@ -1,0 +1,9 @@
+description: ZMK NEC IR transmitter driver
+
+compatible: "zmk,ir-nec"
+
+properties:
+  ir-gpios:
+    type: phandle-array
+    required: true
+    description: GPIO pin connected to the IR LED

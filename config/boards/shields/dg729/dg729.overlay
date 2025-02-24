@@ -7,6 +7,8 @@
 #define WS2812_RGB_UNDERGLOW_PIN <NRF_PSEL(SPIM_MOSI, 0, 5)>
 #define WS2812_RGB_UNDERGLOW_LEDS 5
 
+#define IR_NEC_LED <&gpio0 8 GPIO_ACTIVE_HIGH>
+
 #define MOUSE_PS2_DRIVER_UART
 #define MOUSE_PS2_PIN_SCL_PRO_MICRO <&gpio0 13 GPIO_ACTIVE_HIGH>
 #define MOUSE_PS2_PIN_SDA_PRO_MICRO <&gpio0 7  GPIO_ACTIVE_HIGH>
@@ -365,5 +367,13 @@
     // Some of the available settings depend on the keymap. So they
     // are adjusted in...
     // zmk-config/config/includes/trackpoint.dtsi
+  };
+};
+
+/ {
+  ir_nec: ir_nec {
+    status = "okay";
+    compatible = "zmk,ir-nec";
+    ir-gpios = IR_NEC_LED;
   };
 };

@@ -1,0 +1,19 @@
+description: IR NEC Code Sender Behavior
+
+compatible: "zmk,behavior-ir-nec"
+
+properties:
+  "#binding-cells":
+    type: int
+    required: true
+    const: 1
+
+  code:
+    type: int
+    required: false
+    description: IR NEC code to send
+
+binding-cells:
+  - ir_code
+
+include: base.yaml
